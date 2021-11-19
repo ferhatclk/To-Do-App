@@ -14,7 +14,7 @@
 Clone this repository on your local machine.
 
 ```
-https://github.com/ferhatclk/To-Do-App.git
+git clone https://github.com/ferhatclk/To-Do-App.git
 ```
 
 ## Usage
