@@ -8,7 +8,7 @@
 - Deleting a to-do item with a long press.
   
 ## Images
-<img src="https://user-images.githubusercontent.com/59114579/142645922-38c6ef32-6276-4c62-aea4-c3a786e13e32.png" width="23%"></img> <img src="https://user-images.githubusercontent.com/59114579/142645946-7e0c7e09-efaf-453c-80c7-cdb58b322241.png" width="23%"></img> <img src="https://user-images.githubusercontent.com/59114579/142645958-8fd966a1-8a87-42ec-94f0-ac950250fe7b.png" width="23%"></img> 
+<img src="https://user-images.githubusercontent.com/59114579/142645922-38c6ef32-6276-4c62-aea4-c3a786e13e32.png" width="23%"></img> <img src="https://user-images.githubusercontent.com/59114579/142645946-7e0c7e09-efaf-453c-80c7-cdb58b322241.png" width="23%"></img> <img src="https://user-images.githubusercontent.com/59114579/142732768-f06da25a-8f55-4ed3-9e6b-a807331fed8a.png" width="23%"></img>  
 
 ## Installation
 Clone this repository on your local machine.
