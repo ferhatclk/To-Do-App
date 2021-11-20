@@ -1,3 +1,4 @@
+/* eslint-disable react-hooks/exhaustive-deps */
 /* eslint-disable react/jsx-no-undef */
 /**
  * Sample React Native App
@@ -7,7 +8,7 @@
  * @flow strict-local
  */
 
-import React, {useState} from 'react';
+import React, {useState, useEffect} from 'react';
 import {
   SafeAreaView,
   View,
@@ -24,6 +25,14 @@ const App = () => {
   const [color, setColor] = useState('#808080');
   const [todoList, setTodoList] = useState([]);
   const [todo, setTodo] = useState('');
+  const [todoLength, setTodoLength] = useState(0);
+
+  // useEffect ile todoList her değişikliğe uğradığında aktif todo'ların sayısını state'e gönderiyoruz.
+  useEffect(() => {
+    const newTodoList = todoList.filter(item => item.pressed === false);
+    const newLength = newTodoList.length;
+    setTodoLength(newLength);
+  }, [todoList]);
 
   /* textInput componentinin içeriğinde değişiklik olduğunda butonun renginin değişmesini sağlayan fonksiyon */
   const textChange = text => {
@@ -56,7 +65,7 @@ const App = () => {
   // todo'ya basıldığında style'ı değiştirecek fonksiyon (onPress)
   const changeStyle = id => {
     const newTodo = todoList.map(item => {
-      if (item.id == id) {
+      if (item.id === id) {
         return {...item, pressed: true};
       }
       return item;
@@ -83,7 +92,7 @@ const App = () => {
   return (
     <SafeAreaView style={styles.container}>
       <View style={styles.container}>
-        <Header todo={todoList} />
+        <Header length={todoLength} />
         <FlatList
           keyExtractor={item => item.id}
           data={todoList}
